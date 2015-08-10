@@ -1,0 +1,50 @@
+<html>
+<head>
+<title> botones </title>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="botones.css">
+</head>
+<script>
+         function fondo1() {
+         document.body.style.backgroundColor='red';
+         }
+         function fondo2() {
+         document.body.style.backgroundColor='blue';
+         }
+         function mensajeHora(){       
+         var d = new Date();
+         document.write(d.getHours(),":",d.getMinutes(),":",d.getSeconds());
+          alert(d);
+         }
+         function mensajeUrl(){
+         alert("https://www.codecademy.com/es/learn");
+         }
+         function escribirFecha(){
+            var d = new Date();
+            var mesok=new Array(12);
+            mesok[0]="Enero";
+            mesok[1]="Febrero";
+            mesok[2]="Marzo";
+            mesok[3]="Abril";
+            mesok[4]="Mayo";
+            mesok[5]="Junio";
+            mesok[6]="Julio";
+            mesok[7]="Agosto";
+            mesok[8]="Septiembre";
+            mesok[9]="Octubre";
+            mesok[10]="Noviembre";
+            mesok[11]="Diciembre";
+         document.write(d.getDate()," de ",mesok[d.getMonth()]," del ",d.getFullYear());
+         alert(d);
+         }
+         
+   </script>
+<body>
+<input TYPE="button" VALUE="Rojo" onClick="fondo1('red')"/>
+<input TYPE="button" VALUE="Blue" onClick="fondo2('blue')"/>
+<input TYPE="button" VALUE="mensaje hora" onClick="mensajeHora()"/>
+<input TYPE="button" VALUE="mensaje url" onClick="mensajeUrl()"/>
+<input TYPE="button" VALUE="escribir fecha" onClick="escribirFecha()"/>
+
+</body>
+</html>
